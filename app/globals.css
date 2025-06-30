@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #fdf3eb;
   --foreground: #171717;
+  --hero-bg: #f4b507;
+  --tw-bg-opacity: 1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +20,9 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+  background: url(/images/hero-bg.png);
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
 }
