@@ -5,8 +5,8 @@ import CartPanel from "./components/CartPanel";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import toast from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   const [cart, setCart] = useState([]);
@@ -53,7 +53,7 @@ export default function Home() {
       }
     });
 
-    setToastMessage(`Produk ${product.name} Ditambahkan`);
+    setToastMessage(`${product.name} Ditambahkan ✅`);
   };
 
   // remove from cart
@@ -79,7 +79,7 @@ export default function Home() {
       <Navbar cart={cart} onCartClick={toggleCartPanel} />
       <Hero />
       <div>
-        <h1 className="text-3xl font-bold py-4">Products</h1>
+        <h1 className="text-3xl text-slate-700 font-bold py-4">Products</h1>
         <ProductList addToCart={addToCart} />
       </div>
       {isCartOpen && (
@@ -91,7 +91,12 @@ export default function Home() {
           updateQuantity={updateQuantity}
         />
       )}
-      <ToastContainer />
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          duration: 1500,
+        }}
+      />
       <p className="text-center py-8">&#169; Yuds-Store - 2025</p>
     </div>
   );

@@ -7,7 +7,7 @@ const CartPanel = ({
   closeCart,
 }) => {
   return (
-    <div className="reletive text-white z-50 fixed top-0 right-0 w-screen sm:w-[450px] h-full shadow-lg p-6 bg-zinc-950">
+    <div className="reletive text-white z-50 fixed top-0 right-0 w-screen sm:w-[450px] h-full shadow-lg p-6 bg-gray-700">
       <button onClick={closeCart} className="absolute top-4 right-4 text-3xl">
         x
       </button>

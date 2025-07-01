@@ -7,6 +7,7 @@
   --foreground: #171717;
   --hero-bg: #f4b507;
   --tw-bg-opacity: 1;
+  --green: #4ade80;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,5 +25,5 @@ body {
 
 .hero {
   background: url(/images/hero-bg.png);
-  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+  background-color: var(--green);
 }
